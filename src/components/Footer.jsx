@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaPhone,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../utils/animations";
@@ -36,32 +37,34 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black border-t border-white/5 pt-16 pb-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black border-t border-white/5 pt-24 pb-12">
+      <div className="container mx-auto">
         <MotionDiv
           variants={staggerContainer(0.1, 0.1)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20"
         >
           {/* Column 1: Brand */}
-          <MotionDiv variants={fadeIn("up", 0.1)} className="space-y-6">
-            <NavLink to="/" className="font-heading font-bold text-2xl">
+          <MotionDiv variants={fadeIn("up", 0.1)} className="space-y-8">
+            <NavLink
+              to="/"
+              className="font-heading font-bold text-3xl tracking-tighter hover:text-primary transition-colors duration-300"
+            >
               <span className="text-primary">{"< "}</span>
               NJOHFOLIO
               <span className="text-primary">{" />"}</span>
             </NavLink>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-400 pt-2 text-base leading-relaxed max-w-xs">
               Créateur d'expériences digitales innovantes. Je transforme vos
-              idées complexes en produits numériques simples, performants et
-              esthétiques.
+              idées en produits numériques simples, performants et esthétiques.
             </p>
           </MotionDiv>
 
           {/* Column 2: Navigation */}
-          <MotionDiv variants={fadeIn("up", 0.2)} className="space-y-6">
-            <h4 className="text-white font-heading font-semibold text-lg">
+          <MotionDiv variants={fadeIn("up", 0.2)} className="space-y-8">
+            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Navigation
             </h4>
             <ul className="space-y-4">
@@ -69,7 +72,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <NavLink
                     to={item.link}
-                    className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm"
+                    className="text-gray-500 hover:text-primary transition-colors duration-300 text-sm font-medium"
                   >
                     {item.name}
                   </NavLink>
@@ -79,8 +82,8 @@ export default function Footer() {
           </MotionDiv>
 
           {/* Column 3: Socials */}
-          <MotionDiv variants={fadeIn("up", 0.3)} className="space-y-6">
-            <h4 className="text-white font-heading font-semibold text-lg">
+          <MotionDiv variants={fadeIn("up", 0.3)} className="space-y-8">
+            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Suivez-moi
             </h4>
             <div className="flex gap-4">
@@ -90,7 +93,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 transform hover:-translate-y-1"
+                  className="w-12 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-500 transform hover:-translate-y-2"
                   aria-label={social.name}
                 >
                   <social.icon className="text-xl" />
@@ -100,12 +103,21 @@ export default function Footer() {
           </MotionDiv>
 
           {/* Column 4: Contact */}
-          <MotionDiv variants={fadeIn("up", 0.4)} className="space-y-6">
-            <h4 className="text-white font-heading font-semibold text-lg">
+          <MotionDiv variants={fadeIn("up", 0.4)} className="space-y-8">
+            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Contact
             </h4>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-gray-400 text-sm">
+            <ul className="space-y-5">
+              <li className="flex items-center gap-4 text-gray-400 text-sm font-medium">
+                <FaPhone className="text-primary text-base shrink-0" />
+                <a
+                  href="tel:+237652025901"
+                  className="hover:text-primary transition-colors"
+                >
+                  (+237) 652 02 59 01
+                </a>
+              </li>
+              <li className="flex items-center gap-4 text-gray-400 text-sm font-medium">
                 <FaEnvelope className="text-primary text-base shrink-0" />
                 <a
                   href="mailto:njohjunior4@gmail.com"
@@ -114,7 +126,7 @@ export default function Footer() {
                   njohjunior4@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-gray-400 text-sm">
+              <li className="flex items-center gap-4 text-gray-400 text-sm font-medium">
                 <FaMapMarkerAlt className="text-primary text-base shrink-0" />
                 <span>Yaoundé, Cameroun</span>
               </li>
@@ -128,23 +140,23 @@ export default function Footer() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"
+          className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
         >
-          <p className="text-gray-500 text-xs text-center md:text-left">
-            © {currentYear} NJOH SIMPLICE JUNIOR. Tous droits réservés.
+          <p className="text-gray-500 text-xs font-medium text-center md:text-left">
+            © {currentYear} NJOH SIMPLICE JUNIOR. De Cameroun avec ❤️
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-8">
             <a
               href="#"
-              className="text-gray-500 hover:text-white text-xs transition-colors"
+              className="text-gray-500 hover:text-white text-[10px] md:text-xs uppercase tracking-widest transition-colors font-bold"
             >
-              Politique de confidentialité
+              Confidentialité
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-white text-xs transition-colors"
+              className="text-gray-500 hover:text-white text-[10px] md:text-xs uppercase tracking-widest transition-colors font-bold"
             >
-              Mentions légales
+              Mentions Légales
             </a>
           </div>
         </MotionDiv>

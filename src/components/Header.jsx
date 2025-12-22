@@ -28,25 +28,25 @@ export default function Header() {
       viewport={{ once: true }}
       className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5"
     >
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <nav className="container mx-auto">
+        <div className="flex items-center justify-between h-24">
           <NavLink
             to="/"
-            className="font-heading font-bold text-xl md:text-2xl hover:text-primary transition-colors duration-300 group"
+            className="font-heading font-bold text-2xl md:text-3xl hover:text-primary transition-colors duration-300 group tracking-tighter"
           >
             <MotionSpan
               className="text-primary inline-block"
-              whileHover={{ x: -3 }}
+              whileHover={{ x: -2 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
               {"< "}
             </MotionSpan>
-            <span className="group-hover:tracking-wider transition-all duration-300">
+            <span className="group-hover:tracking-normal transition-all duration-300">
               NJOHFOLIO
             </span>
             <MotionSpan
               className="text-primary inline-block"
-              whileHover={{ x: 3 }}
+              whileHover={{ x: 2 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
               {" />"}
@@ -54,28 +54,27 @@ export default function Header() {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 font-sans">
-            <ul className="text-white font-medium flex gap-6">
+          <div className="hidden md:flex items-center gap-10 font-sans">
+            <ul className="text-white font-bold flex gap-8 text-[12px] uppercase tracking-[0.2em]">
               {navItems.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.link}
                   end={item.link === "/"}
                   className={({ isActive }) =>
-                    `transition-all duration-300 hover:text-primary ${
-                      isActive
-                        ? "text-primary underline underline-offset-8"
-                        : "text-white"
+                    `transition-all duration-300 hover:text-primary relative group py-2 ${
+                      isActive ? "text-primary" : "text-white/70"
                     }`
                   }
                 >
                   {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                 </NavLink>
               ))}
             </ul>
 
             <NavLink to="/contact">
-              <PrimaryButton className="hidden lg:block text-sm hover:scale-95 transition-all duration-300">
+              <PrimaryButton className="hidden lg:block text-xs px-8 py-3 uppercase tracking-widest font-black">
                 Contactez-moi
               </PrimaryButton>
             </NavLink>

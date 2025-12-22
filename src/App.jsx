@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import GuestLayout from "./Layouts/GuestLayout";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
@@ -11,6 +12,7 @@ import Ressources from "./pages/Ressources";
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Toaster position="bottom-right" reverseOrder={false} />
       <Routes>
         <Route path="/" element={<GuestLayout />}>
