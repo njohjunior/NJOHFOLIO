@@ -13,7 +13,7 @@ export default function Pricing() {
         variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="container mx-auto"
       >
         {/* Section Header */}

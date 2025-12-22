@@ -8,11 +8,10 @@ const MotionA = motion.a;
 export default function ProjectCard({ project, index }) {
   return (
     <MotionDiv
-      variants={fadeIn("up", index * 0.2)}
+      variants={fadeIn("up", index * 0.1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      layout
       className="group relative bg-slate-900/50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 border border-slate-800 hover:border-primary/50"
       whileHover={{ y: -10 }}
     >

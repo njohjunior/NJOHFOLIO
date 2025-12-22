@@ -64,9 +64,9 @@ export default function Footer() {
 
           {/* Column 2: Navigation */}
           <MotionDiv variants={fadeIn("up", 0.2)} className="space-y-8">
-            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
+            <h3 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Navigation
-            </h4>
+            </h3>
             <ul className="space-y-4">
               {navItems.map((item) => (
                 <li key={item.name}>
@@ -83,9 +83,9 @@ export default function Footer() {
 
           {/* Column 3: Socials */}
           <MotionDiv variants={fadeIn("up", 0.3)} className="space-y-8">
-            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
+            <h3 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Suivez-moi
-            </h4>
+            </h3>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -104,9 +104,9 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <MotionDiv variants={fadeIn("up", 0.4)} className="space-y-8">
-            <h4 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
+            <h3 className="text-white font-heading font-bold text-xs uppercase tracking-[0.3em]">
               Contact
-            </h4>
+            </h3>
             <ul className="space-y-5">
               <li className="flex items-center gap-4 text-gray-400 text-sm font-medium">
                 <FaPhone className="text-primary text-base shrink-0" />

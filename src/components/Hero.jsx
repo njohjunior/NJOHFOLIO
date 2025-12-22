@@ -59,14 +59,20 @@ export default function Hero() {
           className="flex items-center gap-6 pt-8"
         >
           {[
-            { icon: FaGithub, href: "https://github.com/njohjunior" },
+            {
+              icon: FaGithub,
+              href: "https://github.com/njohjunior",
+              name: "GitHub",
+            },
             {
               icon: FaLinkedin,
               href: "https://linkedin.com/in/njoh-simplice-junior",
+              name: "LinkedIn",
             },
             {
               icon: FaInstagram,
               href: "https://instagram.com/njoh_simplice",
+              name: "Instagram",
             },
           ].map((social, index) => (
             <a
@@ -75,6 +81,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-400 hover:text-primary transition-all duration-300 hover:scale-110"
+              aria-label={social.name}
             >
               <social.icon />
             </a>

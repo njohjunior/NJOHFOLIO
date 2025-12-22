@@ -57,19 +57,20 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-10 font-sans">
             <ul className="text-white font-bold flex gap-8 text-[12px] uppercase tracking-[0.2em]">
               {navItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.link}
-                  end={item.link === "/"}
-                  className={({ isActive }) =>
-                    `transition-all duration-300 hover:text-primary relative group py-2 ${
-                      isActive ? "text-primary" : "text-white/70"
-                    }`
-                  }
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
-                </NavLink>
+                <li key={item.name}>
+                  <NavLink
+                    to={item.link}
+                    end={item.link === "/"}
+                    className={({ isActive }) =>
+                      `transition-all duration-300 hover:text-primary relative group py-2 ${
+                        isActive ? "text-primary" : "text-white/70"
+                      }`
+                    }
+                  >
+                    {item.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                  </NavLink>
+                </li>
               ))}
             </ul>
 
