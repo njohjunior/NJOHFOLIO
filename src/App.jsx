@@ -8,7 +8,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Tools from "./pages/Tools";
 import Ressources from "./pages/Ressources";
-import { VercelAnalytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -25,7 +25,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-      <VercelAnalytics />
+      <Analytics />
     </>
   );
 }
