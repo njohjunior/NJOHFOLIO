@@ -12,7 +12,7 @@ const projects = [
   },
   {
     id: 1,
-    type: "wordpress",
+    type: "Wordpress",
     title: "FIGURATIVE",
     description:
       "Site vitrine d’une entreprise spécialisée en réalité augmentée et PLV, mettant en avant ses solutions innovantes, ses réalisations et son positionnement technologique à travers un design immersif.",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 2,
-    type: "wordpress",
+    type: "Wordpress",
     title: "OEIL-SUR",
     description:
       "Plateforme dédiée à la sécurité informatique, à la prévention incendie et aux solutions technologiques, conçue pour présenter les services, sensibiliser et renforcer la crédibilité de l’entreprise.",
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: 3,
-    type: "wordpress",
+    type: "Wordpress",
     title: "SYNERGIE BARBER",
     description:
       "Site vitrine pour un salon de barbering, valorisant les services, l’identité visuelle, les réalisations et facilitant la prise de contact avec une expérience utilisateur simple et efficace.",
@@ -45,7 +45,7 @@ const projects = [
   },
   {
     id: 4,
-    type: "wordpress",
+    type: "Wordpress",
     title: "CJARC",
     description:
       "Site institutionnel du Centre des Jeunes Aveugles en Réhabilitation du Cameroun, visant à présenter ses missions, ses programmes, ses actions sociales et à renforcer sa visibilité en ligne.",
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     id: 5,
-    type: "wordpress",
+    type: "Wordpress",
     title: "CMICJARC",
     description:
       "Plateforme du Centre Multimédia Inclusif du CJARC, mettant en avant les formations, les équipements et les initiatives numériques dédiées à l’inclusion et à l’autonomisation des personnes en situation de handicap.",
@@ -67,7 +67,7 @@ const projects = [
   },
   {
     id: 6,
-    type: "wordpress",
+    type: "Wordpress",
     title: "IMMIGRATION LAFINESSE",
     description:
       "Site web pour une agence d’immigration vers le Canada, conçu pour informer, rassurer et accompagner les candidats à travers une présentation claire des services et des démarches.",

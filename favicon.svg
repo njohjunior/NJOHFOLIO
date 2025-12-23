@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <!-- Fond carré orange (#ff4500) -->
+  <rect width="60" height="60" rx="12" fill="#ff4500"/>
+  
+  <!-- Texte NSJ en blanc -->
+  <text 
+    x="50%" 
+    y="50%" 
+    dominant-baseline="central" 
+    text-anchor="middle" 
+    fill="white" 
+    font-family="Sora, sans-serif" 
+    font-weight="bold" 
+    font-size="22">
+    NSJ
+  </text>
+</svg>
