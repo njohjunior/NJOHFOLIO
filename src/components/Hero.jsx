@@ -30,7 +30,7 @@ export default function Hero() {
           className="text-white font-bold tracking-tighter"
         >
           Je transforme vos idées en{" "}
-          <span className="text-primary">produits rentables</span>
+          <span className="text-primary">produits digitaux </span>rentables
         </motion.h1>
 
         <motion.p
