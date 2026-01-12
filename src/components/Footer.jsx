@@ -143,7 +143,7 @@ export default function Footer() {
           className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <p className="text-gray-500 text-xs font-medium text-center md:text-left">
-            © {currentYear} NJOH SIMPLICE JUNIOR. De Cameroun avec ❤️
+            © {currentYear} NJOH SIMPLICE JUNIOR ❤️
           </p>
           <div className="flex gap-8">
             <a
